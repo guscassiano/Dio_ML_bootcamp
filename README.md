@@ -1,104 +1,53 @@
-# 🐱🐶 Cats vs Dogs: Transfer Learning
+# 🐶🐱 Classificador de Gatos e Cachorros com VGG16 (Transfer Learning)
 
-## Descrição do Projeto
+Este projeto utiliza **Transfer Learning** com o modelo **VGG16** para classificar imagens entre **gatos e cachorros**, usando o dataset PetImages da Microsoft.
 
-Neste experimento, aplicamos técnicas de **Transfer Learning** para classificar imagens de gatos e cachorros. Utilizamos um dataset grande (12.500 imagens por classe) para mitigar sobreajuste observado em conjuntos menores. O objetivo é treinar uma rede neural eficiente e avaliar seu desempenho em dados inéditos.
+## 🔍 Sobre o Projeto
 
-## Estrutura do Notebook
+A ideia principal é aproveitar o poder de redes neurais pré-treinadas (no caso, o VGG16 treinado no ImageNet) e adaptar suas camadas finais para uma nova tarefa: distinguir entre gatos e cachorros.
 
-1. **Setup e imports**
-   Importamos bibliotecas essenciais (`tensorflow`, `keras`, `ImageDataGenerator`, etc.) e configuramos o ambiente (incluindo GPU quando disponível).
+## 📁 Dataset
 
-2. **Download e extração do dataset**
-   Utilizamos `wget` para baixar o dataset *Kaggle Cats and Dogs* e extraímos seu conteúdo.
+Utilizamos o conjunto de dados fornecido pela Microsoft:
 
-3. **Verificação da quantidade de imagens**
-   Confirmamos que cada classe possui 12 501 imagens.
+- Link: [PetImages Dataset (Microsoft)](https://download.microsoft.com/download/3/e/1/3e1c3f21-ecdb-4869-8368-6deba77b919f/kagglecatsanddogs_5340.zip)
+- Contém: ~25.000 imagens (metade gatos, metade cachorros)
 
-4. **Preparação dos diretórios de treino e teste**
-   Estruturamos pastas em `/tmp/cats-v-dogs/{training,testing}/{cats,dogs}` para organizar os dados.
+## 🧠 Modelo Utilizado
 
-5. **Função `split_data`**
-   Implementamos uma função que seleciona e distribui aleatoriamente 90 % das imagens para treinamento e 10 % para validação/teste. Ignoramos arquivos com tamanho zero.
+- **Base**: VGG16 (pré-treinada no ImageNet)
+- **Camadas adicionais**: Flatten, Dense, Dropout e camada de saída com ativação sigmoide
+- **Compilação**: `optimizer='adam'`, `loss='binary_crossentropy'`, `metrics=['accuracy']`
 
-6. **Verificação final do split**
-   Validamos que foram selecionadas \~22 500 imagens para treino (11 250 por classe) e \~2 500 para teste (1 250 por classe).
+## 🚀 Execução no Google Colab
 
-7. **Construção do modelo**
-   Montamos um modelo `Sequential` com camadas Conv2D e MaxPooling, seguido por Flatten + Dense + saída sigmoid. Compilamos com `RMSprop`, `binary_crossentropy` e métrica de acurácia.
+Você pode rodar todo o projeto diretamente no Google Colab:
 
-8. **Geradores de imagens**
-   Utilizamos `ImageDataGenerator` com `rescale=1./255` para carregar imagens de treino e validação em lotes de 250 imagens de 150×150 pixels.
+1. Baixar e extrair o dataset
+2. Limpar imagens corrompidas
+3. Separar em treino/teste
+4. Treinar o modelo
+5. Fazer testes manuais com upload de imagens
 
-9. **Treinamento**
-   Treinamos o modelo com `model.fit()` por 15 épocas, com `steps_per_epoch=90` e `validation_steps=6`.
+## 🧪 Teste Manual
 
-10. **Visualização dos resultados**
-    Plotamos acurácia e perda para treino e validação ao longo das épocas, avaliando sobreajuste.
+No final do notebook, é possível fazer o **upload de imagens à mão** para verificar como o modelo responde.
 
-11. **Teste interativo**
-    Permitimos upload de imagens para predição (“cat” ou “dog”) pelo modelo treinado.
+## 📊 Resultados
 
----
+- Acurácia de validação próxima de 90% (varia conforme execução)
+- Bom desempenho mesmo com poucas épocas, graças à transferência de aprendizado
 
-## Como executar
+## 🛠️ Requisitos
 
-1. Acesse o Colab pelo badge.
-2. Execute todas as células. O download (\~800 MB) pode demorar.
-3. Após o treino, faça upload de imagens para testar o classificador em tempo real.
+- Google Colab (recomendado)
+- TensorFlow / Keras
+- Python 3.x
 
----
+## 📄 Licença
 
-## Aprendizados
-
-* Como estruturar um pipeline de classificação de imagens com `ImageDataGenerator`.
-* Técnicas de pré-processamento e validação de dados (ex.: remover arquivos corrompidos).
-* Efeitos de datasets maiores na redução de overfitting.
-* Monitoramento de métricas durante o treino e uso prático do modelo com upload de imagens.
+Este projeto está sob a licença MIT. Sinta-se livre para usar, modificar e contribuir!
 
 ---
 
-## Possíveis melhorias
-
-* Reimplementar com **Transfer Learning** usando modelos pré-treinados (como VGG16, InceptionV3, ResNet) para melhorar performance.
-* Aplicar **Data Augmentation** para ampliar variedade de dados.
-* Ajustar hiperparâmetros (número de camadas, tipo de otimizador, scheduler) para maior robustez.
-* Salvar e carregar o modelo treinado (`model.save()` / `load_model()`).
-
----
-
-## Estrutura de pastas
-
-```text
-/tmp/cats-v-dogs/
-├── training/
-│   ├── cats/
-│   └── dogs/
-└── testing/
-    ├── cats/
-    └── dogs/
-```
-
-Cada subpasta contém imagens `.jpg` usadas no treinamento e validação.
-
----
-
-## Requisitos
-
-* Python 3.x
-* TensorFlow 2.x
-* GPU opcional, mas recomendada para acelerar o treino
-
-```bash
-pip install tensorflow matplotlib
-```
-
----
-
-## Licença & Créditos
-
-Este notebook foi desenvolvido como parte do *bootcamp DIO – Transfer Learning* e **baseado no trabalho original de Laurence Moroney**, disponível em seu repositório para o evento *ML Day Tokyo* — Lab6 – *Cats‑v‑Dogs* no Colab.  
-Agradeço ao Laurence por compartilhar este excelente recurso com a comunidade.
-
-Link original: [Lab6 – Cats‑v‑Dogs por Laurence Moroney](https://colab.research.google.com/github/lmoroney/mlday-tokyo/blob/master/Lab6-Cats-v-Dogs.ipynb#scrollTo=3sd9dQWa23aj)
-
+Feito com ❤️ por Gustavo Cassiano Pinto
