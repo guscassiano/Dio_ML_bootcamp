@@ -1,53 +1,27 @@
-# 🐶🐱 Classificador de Gatos e Cachorros com VGG16 (Transfer Learning)
+# 📊 Demonstração de Métricas de Avaliação de Modelos de Machine Learning
 
-Este projeto utiliza **Transfer Learning** com o modelo **VGG16** para classificar imagens entre **gatos e cachorros**, usando o dataset PetImages da Microsoft.
+Este notebook do Google Colab demonstra de forma interativa como funcionam as métricas de avaliação de desempenho para modelos de Machine Learning, focando em problemas de classificação binária. Ele gera dados aleatórios para simular rótulos reais e previsões de um modelo, permitindo a visualização da **Matriz de Confusão** e o cálculo de métricas essenciais como **Acurácia**, **Precisão**, **Recall (Sensibilidade)**, **Especificidade** e **F1-Score**.
 
-## 🔍 Sobre o Projeto
+## ✨ Destaques
 
-A ideia principal é aproveitar o poder de redes neurais pré-treinadas (no caso, o VGG16 treinado no ImageNet) e adaptar suas camadas finais para uma nova tarefa: distinguir entre gatos e cachorros.
+* **Simulação de Dados:** Gera rótulos reais (`y_true`) e previsões do modelo (`y_pred`) de forma aleatória, com a possibilidade de controlar a acurácia das previsões.
+* **Matriz de Confusão Visual:** Apresenta a matriz de confusão de forma clara e colorida utilizando `seaborn` e `matplotlib`, facilitando a identificação de Verdadeiros Positivos, Verdadeiros Negativos, Falsos Positivos e Falsos Negativos.
+* **Cálculo de Métricas:** Calcula e exibe as principais métricas de avaliação de desempenho para classificação binária.
+* **Interpretação Clara:** Oferece uma explicação detalhada de cada componente da matriz e das métricas calculadas.
 
-## 📁 Dataset
+## 🚀 Como Executar
 
-Utilizamos o conjunto de dados fornecido pela Microsoft:
+1.  **Copie o código ou abra o arquivo:** As seções de código Python estão formatadas em blocos de código no arquivo `Matriz_de_confusão.ipynb`. Você pode copiar cada bloco e colar em células separadas no seu notebook do Colab ou abrir o arquivo diretamente.
+2.  **Abra o Google Colab:** Vá para [https://colab.research.google.com/](https://colab.research.google.com/).
+3.  **Crie um novo Notebook:** Clique em "File" (Arquivo) -> "New notebook" (Novo notebook).
+4.  **Cole o código nas células:** Cole cada bloco de código Python (delimitado por três crases ` ```python ` e ` ``` `) em uma nova célula do Colab.
+5.  **Execute as Células:** Você pode executar as células individualmente (clicando no ícone de "play" ao lado de cada célula) ou executar todas as células em sequência (clicando em `Runtime` > `Run all`).
 
-- Link: [PetImages Dataset (Microsoft)](https://download.microsoft.com/download/3/e/1/3e1c3f21-ecdb-4869-8368-6deba77b919f/kagglecatsanddogs_5340.zip)
-- Contém: ~25.000 imagens (metade gatos, metade cachorros)
+## ⚙️ Código e Configuração
 
-## 🧠 Modelo Utilizado
+### Instalação de Bibliotecas (se necessário)
 
-- **Base**: VGG16 (pré-treinada no ImageNet)
-- **Camadas adicionais**: Flatten, Dense, Dropout e camada de saída com ativação sigmoide
-- **Compilação**: `optimizer='adam'`, `loss='binary_crossentropy'`, `metrics=['accuracy']`
+Embora `numpy`, `sklearn`, `matplotlib` e `seaborn` já venham pré-instalados no Colab, você pode incluir esta célula caso esteja executando em um ambiente diferente:
 
-## 🚀 Execução no Google Colab
-
-Você pode rodar todo o projeto diretamente no Google Colab:
-
-1. Baixar e extrair o dataset
-2. Limpar imagens corrompidas
-3. Separar em treino/teste
-4. Treinar o modelo
-5. Fazer testes manuais com upload de imagens
-
-## 🧪 Teste Manual
-
-No final do notebook, é possível fazer o **upload de imagens à mão** para verificar como o modelo responde.
-
-## 📊 Resultados
-
-- Acurácia de validação próxima de 90% (varia conforme execução)
-- Bom desempenho mesmo com poucas épocas, graças à transferência de aprendizado
-
-## 🛠️ Requisitos
-
-- Google Colab (recomendado)
-- TensorFlow / Keras
-- Python 3.x
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Sinta-se livre para usar, modificar e contribuir!
-
----
-
-Feito com ❤️ por Gustavo Cassiano Pinto
+```python
+# !pip install numpy scikit-learn matplotlib seaborn
