@@ -20,32 +20,32 @@ Aqui está a lista dos projetos desenvolvidos durante o bootcamp. Cada um aborda
 ### 1. 🧠 Redução de Dimensionalidade com imagem em PPM
 Análise e redução de dimensionalidade de conjuntos imagens gerando imagens em tons de cinza (PGM) e binarizá-las (PBM), o que facilita a visualização e otimização o treinamento de modelos.
 <br>
-🔗 **Acesse o projeto na branch:** [`dimensionality_reduction`](./dimensionality_reduction)
+🔗 **Acesse o projeto na branch:** [`dimensionality_reduction`](./tree/dimensionality_reduction)
 
 ### 2. 📊 Análise de Desempenho com Matriz de Confusão
 Estudo e implementação da matriz de confusão como ferramenta para avaliar a performance de modelos de classificação. O projeto foca em como interpretar as métricas de verdadeiros positivos, falsos positivos, verdadeiros negativos e falsos negativos para aprimorar um modelo.
 <br>
-🔗 **Acesse o projeto na branch:** [`confusion_matrix`](./confusion_matrix)
+🔗 **Acesse o projeto na branch:** [`confusion_matrix`](./tree/confusion_matrix)
 
 ### 3. 📸 Detecção Facial em Imagens
 Desenvolvimento de um sistema para identificar e extrair faces de imagens utilizando a biblioteca OpenCV. Este projeto é um passo fundamental em aplicações de Visão Computacional, como reconhecimento facial e análise de expressões.
 <br>
-🔗 **Acesse o projeto na branch:** [`face_detection`](./face_detection)
+🔗 **Acesse o projeto na branch:** [`face_detection`](./tree/face_detection)
 
 ### 4. 🖼️ Sistema de Recomendação de Produtos por Imagem
 Criação de um sistema que recomenda produtos com base em sua similaridade visual. O modelo utiliza Deep Learning para extrair *features* (características) das imagens e compará-las para encontrar os itens mais parecidos.
 <br>
-🔗 **Acesse o projeto na branch:** [`image_recommendation_system`](./image_recommendation_system)
+🔗 **Acesse o projeto na branch:** [`image_recommendation_system`](./tree/image_recommendation_system)
 
 ### 5. 🗣️ Assistente Virtual com Reconhecimento de Voz
 Implementação de um assistente de voz básico em Python. O projeto explora conceitos de Processamento de Linguagem Natural (PLN) para capturar comandos de voz do usuário, interpretá-los e executar tarefas simples.
 <br>
-🔗 **Acesse o projeto na branch:** [`voice_assistent`](./voice_assistent)
+🔗 **Acesse o projeto na branch:** [`voice_assistent`](./tree/voice_assistent)
 
 ### 6. 💡 Classificação de Imagens com Transfer Learning
 Aplicação da técnica de Transfer Learning para resolver um problema de classificação de imagens (gatos vs. cachorros). Utilizando a arquitetura pré-treinada VGG16, o projeto demonstra como alcançar alta acurácia com menor tempo de treinamento e menos dados.
 <br>
-🔗 **Acesse o notebook na branch:** [`cats-vs-dogs`](./cats-vs-dogs)
+🔗 **Acesse o notebook na branch:** [`cats-vs-dogs`](./tree/cats-vs-dogs)
 
 ---
 
