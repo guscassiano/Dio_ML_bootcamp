@@ -5,7 +5,7 @@
 
 ## 📄 Sobre o Repositório
 
-Este repositório centraliza os projetos práticos desenvolvidos durante o **Bootcamp BairesDev - Machine Learning Training**, uma iniciativa da **BairesDev** em parceria com a **Digital Innovation One**. O programa teve como objetivo uma imersão profunda no universo de Inteligência Artificial, Aprendizado de Máquina e LLMs, com foco total na aplicação prática dos conceitos.
+Este repositório centraliza os projetos práticos desenvolvidos durante o **Bootcamp BairesDev - Machine Learning Training**, uma iniciativa da **BairesDev** em parceria com a **DIO**. O programa teve como objetivo uma imersão profunda no universo de Inteligência Artificial, Aprendizado de Máquina e LLMs, com foco total na aplicação prática dos conceitos.
 
 ## 🚀 Como Navegar
 
@@ -17,8 +17,8 @@ Cada projeto está contido em sua própria `branch`, garantindo organização e 
 
 Aqui está a lista dos projetos desenvolvidos durante o bootcamp. Cada um aborda um conceito ou aplicação diferente dentro do campo de Machine Learning.
 
-### 1. 🧠 Redução de Dimensionalidade com PCA e t-SNE
-Análise e aplicação das técnicas de PCA (Principal Component Analysis) e t-SNE (t-distributed Stochastic Neighbor Embedding) para reduzir a dimensionalidade de conjuntos de dados, facilitando a visualização e otimizando o treinamento de modelos.
+### 1. 🧠 Redução de Dimensionalidade com imagem em PPM
+Análise e redução de dimensionalidade de conjuntos imagens gerando imagens em tons de cinza (PGM) e binarizá-las (PBM), o que facilita a visualização e otimização o treinamento de modelos.
 <br>
 🔗 **Acesse o projeto na branch:** [`dimensionality_reduction`](./tree/dimensionality_reduction)
 
