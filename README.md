@@ -1,53 +1,73 @@
-# 🐶🐱 Classificador de Gatos e Cachorros com VGG16 (Transfer Learning)
+# BairesDev - Machine Learning Training Bootcamp
 
-Este projeto utiliza **Transfer Learning** com o modelo **VGG16** para classificar imagens entre **gatos e cachorros**, usando o dataset PetImages da Microsoft.
+![Status](https://img.shields.io/badge/Status-Concluído-brightgreen)
+![GitHub top language](https://img.shields.io/github/languages/top/guscassiano/Dio_ML_bootcamp)
 
-## 🔍 Sobre o Projeto
+## 📄 Sobre o Repositório
 
-A ideia principal é aproveitar o poder de redes neurais pré-treinadas (no caso, o VGG16 treinado no ImageNet) e adaptar suas camadas finais para uma nova tarefa: distinguir entre gatos e cachorros.
+Este repositório centraliza os projetos práticos desenvolvidos durante o **Bootcamp BairesDev - Machine Learning Training**, uma iniciativa da **BairesDev** em parceria com a **Digital Innovation One**. O programa teve como objetivo uma imersão profunda no universo de Inteligência Artificial, Aprendizado de Máquina e LLMs, com foco total na aplicação prática dos conceitos.
 
-## 📁 Dataset
+## 🚀 Como Navegar
 
-Utilizamos o conjunto de dados fornecido pela Microsoft:
-
-- Link: [PetImages Dataset (Microsoft)](https://download.microsoft.com/download/3/e/1/3e1c3f21-ecdb-4869-8368-6deba77b919f/kagglecatsanddogs_5340.zip)
-- Contém: ~25.000 imagens (metade gatos, metade cachorros)
-
-## 🧠 Modelo Utilizado
-
-- **Base**: VGG16 (pré-treinada no ImageNet)
-- **Camadas adicionais**: Flatten, Dense, Dropout e camada de saída com ativação sigmoide
-- **Compilação**: `optimizer='adam'`, `loss='binary_crossentropy'`, `metrics=['accuracy']`
-
-## 🚀 Execução no Google Colab
-
-Você pode rodar todo o projeto diretamente no Google Colab:
-
-1. Baixar e extrair o dataset
-2. Limpar imagens corrompidas
-3. Separar em treino/teste
-4. Treinar o modelo
-5. Fazer testes manuais com upload de imagens
-
-## 🧪 Teste Manual
-
-No final do notebook, é possível fazer o **upload de imagens à mão** para verificar como o modelo responde.
-
-## 📊 Resultados
-
-- Acurácia de validação próxima de 90% (varia conforme execução)
-- Bom desempenho mesmo com poucas épocas, graças à transferência de aprendizado
-
-## 🛠️ Requisitos
-
-- Google Colab (recomendado)
-- TensorFlow / Keras
-- Python 3.x
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Sinta-se livre para usar, modificar e contribuir!
+Cada projeto está contido em sua própria `branch`, garantindo organização e isolamento do código. A branch `main` serve como um portal, contendo este resumo geral. Para explorar o código-fonte e os notebooks de um projeto específico, por favor, navegue até a branch correspondente.
 
 ---
 
-Feito com ❤️ por Gustavo Cassiano Pinto
+## 📂 Projetos Desenvolvidos
+
+Aqui está a lista dos projetos desenvolvidos durante o bootcamp. Cada um aborda um conceito ou aplicação diferente dentro do campo de Machine Learning.
+
+### 1. 🧠 Redução de Dimensionalidade com PCA e t-SNE
+Análise e aplicação das técnicas de PCA (Principal Component Analysis) e t-SNE (t-distributed Stochastic Neighbor Embedding) para reduzir a dimensionalidade de conjuntos de dados, facilitando a visualização e otimizando o treinamento de modelos.
+<br>
+🔗 **Acesse o projeto na branch:** [`dimensionality_reduction`](./tree/dimensionality_reduction)
+
+### 2. 📊 Análise de Desempenho com Matriz de Confusão
+Estudo e implementação da matriz de confusão como ferramenta para avaliar a performance de modelos de classificação. O projeto foca em como interpretar as métricas de verdadeiros positivos, falsos positivos, verdadeiros negativos e falsos negativos para aprimorar um modelo.
+<br>
+🔗 **Acesse o projeto na branch:** [`confusion_matrix`](./tree/confusion_matrix)
+
+### 3. 📸 Detecção Facial em Imagens
+Desenvolvimento de um sistema para identificar e extrair faces de imagens utilizando a biblioteca OpenCV. Este projeto é um passo fundamental em aplicações de Visão Computacional, como reconhecimento facial e análise de expressões.
+<br>
+🔗 **Acesse o projeto na branch:** [`face_detection`](./tree/face_detection)
+
+### 4. 🖼️ Sistema de Recomendação de Produtos por Imagem
+Criação de um sistema que recomenda produtos com base em sua similaridade visual. O modelo utiliza Deep Learning para extrair *features* (características) das imagens e compará-las para encontrar os itens mais parecidos.
+<br>
+🔗 **Acesse o projeto na branch:** [`image_recommendation_system`](./tree/image_recommendation_system)
+
+### 5. 🗣️ Assistente Virtual com Reconhecimento de Voz
+Implementação de um assistente de voz básico em Python. O projeto explora conceitos de Processamento de Linguagem Natural (PLN) para capturar comandos de voz do usuário, interpretá-los e executar tarefas simples.
+<br>
+🔗 **Acesse o projeto na branch:** [`voice_assistent`](./tree/voice_assistent)
+
+### 6. 💡 Classificação de Imagens com Transfer Learning
+Aplicação da técnica de Transfer Learning para resolver um problema de classificação de imagens (gatos vs. cachorros). Utilizando a arquitetura pré-treinada VGG16, o projeto demonstra como alcançar alta acurácia com menor tempo de treinamento e menos dados.
+<br>
+🔗 **Acesse o notebook na branch:** [`cats-vs-dogs`](./tree/cats-vs-dogs)
+
+---
+
+## 🛠️ Tecnologias e Habilidades
+
+As seguintes ferramentas, bibliotecas e conceitos foram utilizados e aprimorados ao longo dos projetos:
+
+* **Linguagem:** `Python`
+* **Bibliotecas de ML/DL:** `TensorFlow`, `Keras`, `Scikit-learn`
+* **Manipulação de Dados:** `Pandas`, `NumPy`, `SciPy`
+* **Visão Computacional:** `OpenCV`, `Pillow`
+* **Conceitos:** Machine Learning, Deep Learning, Transfer Learning, Visão Computacional, Processamento de Linguagem Natural (PLN).
+* **Ambiente:** `Jupyter Notebook`, `Anaconda`
+
+---
+
+## 👨‍💻 Autor
+
+* **Gustavo Cassiano Pinto**
+* [LinkedIn](https://linkedin.com/in/gustavocassiano-dev)
+* [GitHub](https://github.com/guscassiano)
+
+## 🙏 Agradecimentos
+
+Agradeço à **BairesDev** e à **DIO** pela oportunidade de aprendizado e desenvolvimento.
