@@ -11,7 +11,11 @@ O notebook principal é **Face_detector.ipynb**.
 2. [Funcionalidades](#funcionalidades)  
 3. [Requisitos](#requisitos)  
 4. [Instalação](#instalação)  
-
+5. [Uso](#uso)  
+6. [Estrutura do projeto](#estrutura-do-projeto)  
+7. [Exemplos de resultados](#exemplos-de-resultados)  
+8. [Contribuição](#contribuição)
+   
 ---
 
 ## Descrição
