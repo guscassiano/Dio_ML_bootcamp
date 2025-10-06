@@ -17,8 +17,8 @@ Cada projeto está contido em sua própria `branch`, garantindo organização e 
 
 Aqui está a lista dos projetos desenvolvidos durante o bootcamp. Cada um aborda um conceito ou aplicação diferente dentro do campo de Machine Learning.
 
-### 1. 🧠 Redução de Dimensionalidade com imagem em PPM
-Análise e redução de dimensionalidade de conjuntos imagens gerando imagens em tons de cinza (PGM) e binarizá-las (PBM), o que facilita a visualização e otimização o treinamento de modelos.
+### 1. 🧠 Redução de Dimensionalidade de imagem
+Análise e redução de dimensionalidade de conjuntos imagens gerando novas imagens em tons de cinza (PGM) e binarizá-las (PBM), o que facilita a visualização e otimização o treinamento de modelos. Além disso, o desafio do projeto era realizar utilizando Python puro, sem nenhuma biblioteca ou framework.
 <br>
 🔗 **Acesse o projeto na branch:** [`dimensionality_reduction`](https://github.com/guscassiano/Dio_ML_bootcamp/tree/dimensionality_reduction)
 
